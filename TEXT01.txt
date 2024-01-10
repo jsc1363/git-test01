@@ -1,1 +1,96 @@
-ike
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// Scanner 객체 생성
+		Scanner sc = new Scanner(System.in);
+		
+		// 입력 2회
+		int number1 = sc.nextInt();
+		int number2 = sc.nextInt();
+		
+		// 덧셈 연산
+		int number3 = number1 + number2;
+		
+		// 출력
+		System.out.println(number3);
+		
+		// 반지름을 입력받아서 원의 넓이를 구해보기
+		int radius = sc.nextInt();
+		double circle = radius * radius * 3.14;
+		System.out.println(circle);
+		
+		// 성적 산출기
+		double point = sc.nextDouble();
+		
+		if (point >= 80.0) {
+			System.out.println("A");
+		} else if (point >= 50.0 && point <= 79.0) {
+			System.out.println("B");
+		} else {
+			System.out.println("C");
+		}
+		
+		// 성적 산출기 switch문을 사용하기
+		int pointS = sc.nextInt();
+		int divided = pointS / 10;
+		
+		switch(divided) {
+			case 10: {
+				System.out.println("A");
+				break;
+			}
+			case 9: {
+				System.out.println("A");
+				break;
+			}
+			case 8: {
+				System.out.println("A");
+				break;
+			}
+			case 7: {
+				System.out.println("B");
+				break;
+			}
+			case 6: {
+				System.out.println("B");
+				break;
+			}
+			case 5: {
+				System.out.println("B");
+				break;
+			}
+			default: {
+				System.out.println("C");
+				break;
+			}
+		}
+		
+		// for문을 사용하여 1에서 10중에서 짝수만 출력해보기
+		for (int i = 1; i <= 10; i++) {
+			if (i % 2 == 0) {
+				System.out.println(i);	
+			}
+		}
+		
+		// while문을 사용하여 1에서 10중에서 짝수만 출력해보기
+		int i = 1; // while문에서 초기식은 미리 해주어야 한다.
+		while (i <= 10) {
+			if (i % 2 == 0) {
+				System.out.println(i);
+			}
+			i++;
+		}
+		
+		// 구구단을 5단까지 출력해보기
+		for (int k = 2; k <= 5; k++) {
+			for (int j = 1; j <= 9; j++) {
+				System.out.println(k+" x "+j+" = "+k*j);
+			}
+		}
+		
+		
+	}
+
+}
